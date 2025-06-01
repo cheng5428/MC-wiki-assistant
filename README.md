@@ -1,6 +1,17 @@
 # MC-wiki-assistant
 
-clone该仓库后，先将MiniMind2-Small模型的model.safetensors放到MiniMind2-Small目录下，也可以选择git clone https://hf-mirror.com/jingyaogong/MiniMind2-Small替换MiniMind2-Small目录
-如果想要训练lora，请先运行scripts/convert_model.py，将.safetensors格式转换为.pth格式，接着运行trainer/lora_script.py即可（参见该文件）即可
-想要测试lora模型请在命令行运行 python eval_model.py --lora_name ['lora名字'](例如：'lora_mc_40'，注意后缀512不需要)
-想要测试网站的ui界面，请运行 streamlit run scripts/web_demo.py
+## Getting Started
+
+### Setup
+1. Clone this repository
+2. Download the MiniMind2-Small model's `model.safetensors` file and place it in the `MiniMind2-Small` directory
+    - Alternatively: `git clone https://hf-mirror.com/jingyaogong/MiniMind2-Small` to replace the MiniMind2-Small directory
+
+### Training LoRA Models
+1. Run `scripts/convert_model.py` to convert the `.safetensors` format to `.pth` format
+2. Execute `trainer/lora_script.py` to begin training (see file for details)
+
+### Testing
+- To test a LoRA model: `python eval_model.py --lora_name [lora_name]`
+  - Example: `python eval_model.py --lora_name 'lora_mc_40'` (no need to include the '512' suffix)
+- To test the web UI: `streamlit run scripts/web_demo.py`
