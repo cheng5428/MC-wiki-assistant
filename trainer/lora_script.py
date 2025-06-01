@@ -14,8 +14,8 @@ def run_lora_training():
         "--out_dir", "../out",
         "--epochs", "40",
         "--save_epoch_interval", "10",
-        "--use_wandb", "True",
-        "--wandb_project", "MC-wiki-assistant",
+        # "--use_wandb", 
+        # "--wandb_project", "MC-wiki-assistant",   # 如果需要使用wandb进行实验跟踪
     ]
     
     print("启动LoRA训练...")
