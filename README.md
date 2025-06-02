@@ -14,4 +14,6 @@
 ### Testing
 - To test a LoRA model: `python eval_model.py --lora_name [lora_name]`
   - Example: `python eval_model.py --lora_name 'lora_mc_40'` (no need to include the '512' suffix)
-- To test the web UI: `streamlit run scripts/web_demo.py`
+- To test the web UI: 
+  -'cd scripts'
+  -`streamlit run web_demo.py`
